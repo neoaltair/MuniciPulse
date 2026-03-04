@@ -1,0 +1,455 @@
+/* Officer Dashboard Specific Styles */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.btn-refresh {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #667eea;
+}
+
+.btn-refresh:hover:not(:disabled) {
+    background: #667eea;
+    color: white;
+}
+
+.btn-refresh:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Table Container */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 24px;
+}
+
+.table-container h3 {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    color: #1a202c;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.reports-table thead {
+    background: #f7fafc;
+}
+
+.reports-table th {
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.reports-table td {
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+}
+
+.reports-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.reports-table tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+.title-cell {
+    min-width: 250px;
+}
+
+.title-cell strong {
+    display: block;
+    color: #1a202c;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.distance-cell {
+    white-space: nowrap;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.time-cell {
+    white-space: nowrap;
+    color: #718096;
+    font-size: 13px;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.status-badge-pending {
+    background-color: #fed7d7;
+    color: #742a2a;
+}
+
+.status-badge-in-progress {
+    background-color: #bee3f8;
+    color: #2c5282;
+}
+
+/* Priority Badges */
+.priority-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.priority-low {
+    color: #22543d;
+}
+
+.priority-medium {
+    color: #744210;
+}
+
+.priority-high {
+    color: #742a2a;
+}
+
+/* Edit Button */
+.btn-edit {
+    padding: 6px 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+.btn-edit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* No Reports */
+.no-reports-table {
+    text-align: center;
+    padding: 60px 20px;
+    color: #a0aec0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #1a202c;
+}
+
+.btn-close {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: #a0aec0;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0;
+    line-height: 1;
+}
+
+.btn-close:hover {
+    color: #4a5568;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.report-info {
+    background: #f7fafc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.report-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: #1a202c;
+}
+
+.report-desc {
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+}
+
+.report-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: #718096;
+}
+
+.field-help {
+    font-size: 13px;
+    color: #718096;
+    margin: 4px 0 8px 0;
+}
+
+.file-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    background: #f7fafc;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.file-input:hover {
+    border-color: #667eea;
+    background: #edf2f7;
+}
+
+.image-preview-modal {
+    margin-top: 16px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+}
+
+.image-preview-modal img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.btn-remove-preview {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(229, 62, 62, 0.9);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-remove-preview:hover {
+    background: rgba(197, 48, 48, 1);
+}
+
+.modal-select,
+.modal-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.modal-select:focus,
+.modal-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.modal-textarea {
+    resize: vertical;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 12px;
+    padding: 24px;
+    border-top: 2px solid #e2e8f0;
+}
+
+.btn-cancel-modal {
+    flex: 1;
+    padding: 12px 24px;
+    background: white;
+    color: #4a5568;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cancel-modal:hover:not(:disabled) {
+    background: #f7fafc;
+    border-color: #a0aec0;
+}
+
+.btn-cancel-modal:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-save-modal {
+    flex: 1;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-save-modal:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(72, 187, 120, 0.3);
+}
+
+.btn-save-modal:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .reports-table {
+        font-size: 13px;
+    }
+
+    .reports-table th,
+    .reports-table td {
+        padding: 12px;
+    }
+
+    .title-cell {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .btn-refresh {
+        width: 100%;
+    }
+
+    .table-wrapper {
+        overflow-x: scroll;
+    }
+
+    .reports-table {
+        min-width: 800px;
+    }
+
+    .modal-content {
+        max-width: 100%;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+    }
+
+    .btn-cancel-modal,
+    .btn-save-modal {
+        width: 100%;
+    }
+}
