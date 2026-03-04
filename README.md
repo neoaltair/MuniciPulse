@@ -1,4 +1,4 @@
-# CivicFix - Civic Issue Reporting Platform
+# MuniciPule - Civic Issue Reporting Platform
 
 A full-stack application for citizens to report civic issues and municipal officers to manage and resolve them efficiently.
 
@@ -352,4 +352,3 @@ For issues or questions:
 
 ---
 
-**Built with ❤️ for better civic engagement**
